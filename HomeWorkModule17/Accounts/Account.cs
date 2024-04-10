@@ -7,12 +7,12 @@ using HomeWorkModule17.Calculators;
 
 namespace HomeWorkModule17
 {
+    /// <summary>
+    /// Базовый класс аккаунтов
+    /// </summary>
     public abstract class Account
     {
         public double Balance { get; set; }
         public double Interest { get; set; }
-
-        public void InterestCalculation(ICalculatorInterest calculator) { }
-
     }
 }

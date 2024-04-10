@@ -12,18 +12,15 @@ namespace HomeWorkModule17
     {
         static void Main(string[] args)
         {
-            var solaracc = new SalaryAccount();
-            solaracc.Balance = 100;
+            var salaryAcc = new SalaryAccount { Balance = 200 };
+            salaryAcc.Interest = SalaryAccountInterestCalculator.InterestCalculation(salaryAcc);
+            Console.WriteLine("Процентная ставка зарплатного аккаунта - " + salaryAcc.Interest + "%");
 
-            solaracc.Interest = Calculator.InterestCalculation(solaracc);
-            Console.WriteLine(solaracc.Interest);
 
-            var regulacc = new RegularAccount();
-            regulacc.Balance = 100;
-           Calculator.InterestCalculation(regulacc, new RegularAccountInterestCalculatorcs());
-            Console.WriteLine(regulacc.Interest);
+            var regulAcc = new RegularAccount { Balance = 1001 };
+            regulAcc.Interest = RegularAccountInterestCalculatorcs.InterestCalculation(regulAcc);
+            Console.WriteLine("Процентная ставка обычного аккаунта - " + regulAcc.Interest + "%");
 
-           
         }
     }
 }

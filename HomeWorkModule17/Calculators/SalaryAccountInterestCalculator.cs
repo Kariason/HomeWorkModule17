@@ -7,18 +7,14 @@ using HomeWorkModule17.Accounts;
 
 namespace HomeWorkModule17.Calculators
 {
-    public class SalaryAccountInterestCalculator : ICalculatorInterest
+    /// <summary>
+    /// Класс для работы с зарплатным аккаунтом
+    /// </summary>
+    public class SalaryAccountInterestCalculator : CalculatorInterest
     {
-        public static void InterestCalculation(Account account)
+        public static double InterestCalculation(SalaryAccount account)
         {
-            if (account is SalaryAccount)
-                 account.Interest = account.Balance * 0.5;
-            else
-            {
-                Console.WriteLine("Неверный тип аккаунта");
-                account.Interest = 0;
-            }
-
+            return account.Interest = account.Balance * 0.5;
         }
     }
 }
